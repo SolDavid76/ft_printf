@@ -1,36 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbrhex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: djanusz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/25 12:58:25 by djanusz           #+#    #+#             */
-/*   Updated: 2022/11/25 13:05:23 by djanusz          ###   ########.fr       */
+/*   Created: 2022/11/25 13:13:02 by djanusz           #+#    #+#             */
+/*   Updated: 2022/11/25 14:43:18 by djanusz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printflib.h"
 
-int	ft_putnbr(int n)
+int	ft_putnbr_hex(int n)
 {
-	int			digit;
+	char		*base;
 	long int	nb;
 
-	nb = (long int)n;
+	nb = n;
+	base = "0123456789abcdef";
 	if (nb < 0)
 	{
 		nb = -nb;
 		write(1, "-", 1);
 	}
-	if (nb < 10)
-		write(1, (&nb + 48), 1);
+	if (nb <= 16)
+		write(1, &base[nb], 1);
 	else
 	{
-		digit = nb % 10;
-		nb /= 10;
-		ft_putnbr(nb);
-		write(1, (&digit + 48), 1);
+		ft_putnbr_hex(nb / 16);
+		ft_putnbr_hex(nb % 16);
+	}
+	return (1);
+}
+
+int	ft_putnbr_hexa(int n)
+{
+	char		*base;
+	long int	nb;
+
+	nb = n;
+	base = "0123456789ABCDEF";
+	if (nb < 0)
+	{
+		nb = -nb;
+		write(1, "-", 1);
+	}
+	if (nb <= 16)
+		write(1, &base[nb], 1);
+	else
+	{
+		ft_putnbr_hexa(nb / 16);
+		ft_putnbr_hexa(nb % 16);
 	}
 	return (1);
 }
