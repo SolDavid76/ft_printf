@@ -6,11 +6,11 @@
 /*   By: djanusz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 13:31:42 by djanusz           #+#    #+#             */
-/*   Updated: 2022/11/25 14:57:15 by djanusz          ###   ########.fr       */
+/*   Updated: 2022/11/28 11:58:05 by djanusz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printflib.h"
+#include "ft_printf.h"
 
 int	ft_printf(char *str, ...)
 {
