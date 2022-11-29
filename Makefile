@@ -1,6 +1,7 @@
 SRCS =	ft_printf.c \
 	ft_putchar.c \
 	ft_putstr.c \
+	ft_putaddress.c \
 	ft_putnbr.c \
 	ft_putnbr_hex.c \
 

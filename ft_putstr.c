@@ -6,18 +6,21 @@
 /*   By: djanusz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 12:51:15 by djanusz           #+#    #+#             */
-/*   Updated: 2022/11/28 11:46:46 by djanusz          ###   ########.fr       */
+/*   Updated: 2022/11/29 10:43:41 by djanusz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *str)
+int	ft_putstr(char *str, int *index)
 {
 	int	i;
 
+	(*index) += 2;
+	if (!str)
+		return (write(1, "(null)", 6));
 	i = 0;
 	while (str[i])
 		write(1, &str[i++], 1);
-	return (1);
+	return (i);
 }
