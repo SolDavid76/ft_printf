@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: djanusz <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: djanusz <djanusz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 12:51:15 by djanusz           #+#    #+#             */
-/*   Updated: 2022/11/29 10:43:41 by djanusz          ###   ########.fr       */
+/*   Updated: 2022/11/29 23:46:06 by djanusz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *str, int *index)
+int	ft_putstr(char *str)
 {
 	int	i;
 
-	(*index) += 2;
 	if (!str)
 		return (write(1, "(null)", 6));
 	i = 0;

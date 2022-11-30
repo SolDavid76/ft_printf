@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: djanusz <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: djanusz <djanusz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 12:46:12 by djanusz           #+#    #+#             */
-/*   Updated: 2022/11/29 14:21:42 by djanusz          ###   ########.fr       */
+/*   Updated: 2022/11/29 23:45:56 by djanusz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,4 @@
 int	ft_putchar(char c)
 {
 	return (write(1, &c, 1));
-}
-
-int	ft_putchar_call(char c, int *index)
-{
-	(*index) += 2;
-	return (ft_putchar(c));
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: djanusz <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: djanusz <djanusz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 12:58:25 by djanusz           #+#    #+#             */
-/*   Updated: 2022/11/29 17:01:03 by djanusz          ###   ########.fr       */
+/*   Updated: 2022/11/29 23:46:38 by djanusz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,6 @@ int	ft_putnbr(int n)
 	return (res);
 }
 
-int	ft_putnbr_call(int n, int *index)
-{
-	(*index) += 2;
-	return (ft_putnbr(n));
-}
-
 int	ft_unsignednbr(unsigned int nb)
 {
 	int			digit;
@@ -59,10 +53,4 @@ int	ft_unsignednbr(unsigned int nb)
 		res += ft_putchar(digit + 48);
 	}
 	return (res);
-}
-
-int	ft_unsignednbr_call(unsigned int nb, int *index)
-{
-	(*index) += 2;
-	return (ft_unsignednbr(nb));
 }
